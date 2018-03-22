@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <title>Spreadsheet - DOM Manipulation</title>
+</head>
+<body onload="selectFocus()">
+    <div id="wrap">
+        <div id="main">
+            <h1>Spreadsheet - DOM Manipulation</h1>
+            <br><br>
+            <label for="formulaBox"><img src="images/fx.png" id="fxImg"/></label>
+            <input type="text" id="formulaBox" value="" onkeypress="filterText(this);"/>
+            <button id="btnLoad" type="button" onclick="loadData();">Load</button>
+            <button id="btnSave" type="button" onclick="saveData();">Save</button>
+            <button id="btnClear" type="button" onclick="clearTable();">Clear</button>
+            <br /><br />
+            <div id="spreadsheet">
+                <script type="text/javascript" src="js/createSpreadsheet.js"></script>
+                <script type="text/javascript">
+                    createSpreadsheet();
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
